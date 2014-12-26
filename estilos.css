@@ -13,8 +13,9 @@ body {
 	border-bottom: 1px solid #eee;
 }
 
+/* Ancho de la cabecera */
 #header-1 div {
-	max-width: 1000px;
+	width: 1000px;
 	margin: auto;
 }
 
@@ -48,12 +49,13 @@ label {
 	font-size: 0.8em;
 	font-weight: 600;
 	color: #606060;
-	margin-bottom: 3px;
+	margin-bottom: 4px;
 }
 
 /* S */
+/* Ancho del section */
 #section-1 {
-	max-width: 1000px;
+	width: 1000px;
 	margin: 20px auto 0 auto;
 }
 
@@ -63,33 +65,36 @@ label {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	background-color: #fdfdfd;
-	margin-bottom: 5px;
-}
-
-#section-1 form .boton-true {
-	background-color: #f1693d;
-	color: #fff;
-	font-size: 1em;
-	font-weight: 400;
-	border: none;
 }
 
 #section-1 form select {
 	width: 437px;
 	height: 32px;
-	margin-bottom: 5px;
 }
 
 #section-1 form .input-altitud {
 	width: 175px;
-	margin-bottom: 5px;
 }
 
-#section-1 form td{
+#section-1 form .div-1{
 	display: inline-block;
-	width: 450px;
-	margin: 0 25px 0 25px;
+	width: 496px;
+}
+
+#section-1 form .div-2{
+	display: inline-block;
+	height: 70px;
 	vertical-align: top;
+	width: 450px;
+	margin: 0 23px 0 23px;
+}
+
+#section-1 form .boton-true{
+	background-color: #f1693d;
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	border: none;
 }
 
 span{
