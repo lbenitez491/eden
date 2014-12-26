@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,500,600);
+
+/* B */
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+/* H */
+#header-1 {
+	height: 70px;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #eee;
+}
+
+#header-1 div {
+	max-width: 1000px;
+	margin: auto;
+}
+
+#header-1 div h1 {
+	color: #101010;
+	font-size: 3em;
+	display: inline;
+	font-weight: 600;
+	line-height: 70px;
+}
+
+#header-1 div h2 {
+	color: #828282;
+	font-size: 1em;
+	display: inline;
+	font-weight: 400;
+	margin: 0 0 0 20px;
+}
+
+#header-1 div figure img {
+	height: 40px;
+}
+
+#header-1 div figure {
+	display: inline;
+}
+
+/* L */
+label {
+	display: block;
+	font-size: 0.8em;
+	font-weight: 600;
+	color: #606060;
+	margin-bottom: 3px;
+}
+
+/* S */
+#section-1 {
+	max-width: 1000px;
+	margin: 20px auto 0 auto;
+}
+
+#section-1 form input {
+	width: 437px;
+	height: 32px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #fdfdfd;
+	margin-bottom: 5px;
+}
+
+#section-1 form .boton-true {
+	background-color: #f1693d;
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	border: none;
+}
+
+#section-1 form select {
+	width: 437px;
+	height: 32px;
+	margin-bottom: 5px;
+}
+
+#section-1 form .input-altitud {
+	width: 175px;
+	margin-bottom: 5px;
+}
+
+#section-1 form td{
+	display: inline-block;
+	width: 450px;
+	margin: 0 25px 0 25px;
+	vertical-align: top;
+}
+
+span{
+	font-size: 0.8em;
+	font-weight: 400;
+	color: #808080;
+}
+
+
