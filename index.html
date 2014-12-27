@@ -3,12 +3,13 @@
 	<head lang="es">
 		<title>Edén</title>
 		<meta charset="utf-8" />
-		<meta name="description" content="Descripción temporal" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link rel="stylesheet" type="text/css" href="normalize.css" />
 		<link rel="stylesheet" type="text/css" href="estilos.css" />
+		<link rel="stylesheet" type="text/css" href="normalize.css" />
 		<script src="prefixfree.min.js"></script>
+		<script src="scripts.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<meta name="description" content="Descripción temporal" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 	</head>
 	<body>
 		<header id="header-1">
@@ -21,165 +22,329 @@
 			</div>
 		</header>
 		<section id="section-1">
-			<form action="" method="post">
-				<div class="div-1">
-					<div class="div-2">
-						<label for="input1">
-							Nombre científico
-						</label>
-						<input id="input1" type="text" name="input1" required />
-					</div>
+			<div id="div-1">
+				<nav id="nav-1">
+					<ul>
+						<li id="li-1">
+							<a id="a-1" href="#">Taxonomía</a>
+						</li>
+						<li id="li-2">
+							<a id="a-2" href="#">Descripción</a>
+						</li>
+						<li id="li-3">
+							<a id="a-3" href="#">Distribución</a>
+						</li>
+						<li>
+							<a href="#">Hoja</a>
+						</li>
+						<li>
+							<a href="#">Tallo</a>
+						</li>
+						<li>
+							<a href="#">Flores</a>
+						</li>
+						<li>
+							<a href="#">Frutos</a>
+						</li>
+						<li>
+							<a href="#">Semillas</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<script>
+				$( "#nav-1 ul #li-1" ).click(function(event) {
+					event.preventDefault();
+					$( "#nav-1 ul #li-1" ).attr("class","li-select");
+					$( "#nav-1 ul #li-2" ).attr("class","");
+				  	$( "#nav-1 ul #li-3" ).attr("class","");
 
-					<div class="div-2">
-						<label for="input2">
-							Nombre común
-						</label>
-						<input id="input2" type="text" name="input2" placeholder="" />
-					</div>
+				  	$( "#nav-1 ul #li-1 #a-1" ).attr("class","a-select");
+				  	$( "#nav-1 ul #li-2 #a-2" ).attr("class","");
+				  	$( "#nav-1 ul #li-3 #a-3" ).attr("class","");
 
-					<div class="div-2">
-						<label for="input3">
-							Hábito
-						</label>
-						<select id="input3" name="input3"> 
-							<option selected> - </option>
-							<option>Arboles</option>
-							<option>Arbustos</option>
-							<option>Cactus</option>
-							<option>Hierbas</option>
-							<option>Hepaticas</option>
-							<option>Musgos</option>
-							<option>Anthocerotes</option>
-							<option>Trepadoras</option>
-							<option>Epífitas</option>
-							<option>Líquenes</option>
-							<option>Helechos</option>
-						</select>
-					</div>
+				  	$( "#div-2 form #div-3" ).show();
+				  	$( "#div-2 form #div-4" ).hide();
+				  	$( "#div-2 form #div-5" ).hide();
+				});
 
-					<div class="div-2">
-						<label for="input4">
-							Origen fitogeográfico
-						</label>
-						<select id="input4" name="input4">
-							<option selected> - </option>
-							<option>Nativo</option>
-							<option>Introducido</option>
-							<option>Endémico</option>
-							<option>Cosmopolito</option>
-						</select>
-					</div>
+				$( "#nav-1 ul #li-2" ).click(function(event) {
+					event.preventDefault();
+				  	$( "#li-1" ).attr("class","");
+					$( "#li-2" ).attr("class","li-select");
+				  	$( "#li-3" ).attr("class","");
 
-					<div class="div-2">
-						<label for="input5">
-							Distribución geográfica
-						</label>
-						<select id="input5" name="input5">
-								<option selected> - </option>
-								<option>Chile</option>
-								<option>Global</option>
-						</select>
-					</div>
+				  	$( "#nav-1 ul #li-1 #a-1" ).attr("class","");
+				  	$( "#nav-1 ul #li-2 #a-2" ).attr("class","a-select");
+				  	$( "#nav-1 ul #li-3 #a-3" ).attr("class","");
 
-					<div class="div-2">
-						<label for="input6">
-							Estado de conservación
-						</label>
-						<select id="input6" name="input6">
-								<option selected> - </option>
-								<option>Extinta</option>
-								<option>En peligro</option>
-								<option>Vulnerable</option>
-								<option>Fuera de peligro</option>
-								<option>IC (¿Extinta?)</option>
-								<option>IC (¿En peligro?)</option>
-								<option>IC (¿Vulnerable?)</option>
-								<option>IC (¿Fuera de peligro?)</option>
-								<option>No evaluada</option>
-						</select>
-					</div>
-				</div>
+				  	$( "#div-2 form #div-3" ).hide();
+				  	$( "#div-2 form #div-4" ).show();
+				  	$( "#div-2 form #div-5" ).hide();
+				});
 
-				<div class="div-1">
-					<div class="div-2">
-						<label for="input7">
-							Hábitat
-						</label>
-						<select id="input7" name="input7">
-								<option selected> - </option>
-								<option>Chile</option>
-								<option>Global</option>
-						</select>
-					</div>
+				$( "#nav-1 ul #li-3" ).click(function(event) {
+					event.preventDefault();
+				  	$( "#li-1" ).attr("class","");
+					$( "#li-2" ).attr("class","");
+				  	$( "#li-3" ).attr("class","li-select");
 
-					<div class="div-2">
-						<label for="input8-1">
-							Intervalo de altitud
-						</label>
-						<span>
-							desde
-						</span>
-						<input id="input8-1" class="input-altitud" type="number" name="input8-1" />
-						<span>
-							hasta
-						</span>
-						<input class="input-altitud" type="number" name="input8-2" />
-					</div>
+				  	$( "#nav-1 ul #li-1 #a-1" ).attr("class","");
+				  	$( "#nav-1 ul #li-2 #a-2" ).attr("class","");
+				  	$( "#nav-1 ul #li-3 #a-3" ).attr("class","a-select");
 
-					<div class="div-2">
-						<label for="input9">
-							Ambiente
-						</label>
-						<select id="input9" name="input9">
-								<option selected> - </option>
-								<option>Cordillera de la Costa</option>
-								<option>Cordillera de los Andes</option>
-								<option>Desierto</option>
-								<option>Interior</option>
-								<option>Litoral</option>
-								<option>Turbera</option>
-								<option>Valle Central</option>
-						</select>
-					</div>
+				  	$( "#div-2 form #div-3" ).hide();
+				  	$( "#div-2 form #div-4" ).hide();
+				  	$( "#div-2 form #div-5" ).show();
+				});
+			</script>
+			<div id="div-2">
+				<form action="" method="post">
+					<!-- Sección Taxonomía -->
+					<div id="div-3"> 
+						<div class="div-1">
+							<div class="div-2">
+								<label for="input13">
+									Reino
+								</label>
+								<input id="input13" type="text" name="input13" value="Vegetal" readonly required />
+							</div>
 
-					<div class="div-2">
-						<label for="input10">
-							Regiones vegetales
-						</label>
-						<select id="input10" name="input10">
-								<option selected> - </option>
-								<option>Bosque Andino Patagónico</option>
-								<option>Bosque Caducifolio</option>
-								<option>Bosque Laurifolio</option>
-								<option>Bosque Siempreverde y Turberas</option>
-								<option>Desierto</option>
-								<option>Estepa Alto-andina</option>
-								<option>Estepa Patagónica</option>
-								<option>Matorral y Bosque Esclerófilo</option>
-						</select>
-					</div>						
+							<div class="div-2">
+								<label for="input14">
+									División
+								</label>
+								<input id="input14" type="text" name="input14" />
+							</div>
 
-					<div class="div-2">
-						<label for="input11">
-							Sexo especie
-						</label>
-						<select id="input11" name="input11">
-								<option selected> - </option>
-								<option>Monoico</option>
-								<option>Dioico</option>
-								<option>Hermafrodita</option>
-						</select>
-					</div>
+							<div class="div-2">
+								<label for="input15">
+									Clase
+								</label>
+								<input id="input15" type="text" name="input15" required />
+							</div>
 
-					<div class="div-2">
-						<label for="input12">
-							Epoca de floración
-						</label>
-						<input id="input12" type="text" name="input12" />
+							<div class="div-2">
+								<label for="input16">
+									Subclase
+								</label>
+								<input id="input16" type="text" name="input16" />
+							</div>
+						</div>
+
+						<div class="div-1">
+							<div class="div-2">
+								<label for="input17">
+									Orden
+								</label>
+								<input id="input17" type="text" name="input17" />
+							</div>
+
+							<div class="div-2">
+								<label for="input18">
+									Familia
+								</label>
+								<input id="input18" type="text" name="input18" />
+							</div>
+
+							<div class="div-2">
+								<label for="input19">
+									Subfamilia
+								</label>
+								<input id="input19" type="text" name="input19" />
+							</div>
+
+							<div class="div-2">
+								<label for="input20">
+									Género
+								</label>
+								<input id="input20" type="text" name="input20" />
+							</div>
+						</div>
 					</div>
-				</div>
-				<input class="boton-true" type="submit" value="Guardar" />
-			</form>
+						<!-- Sección Especie -->
+					<div id="div-4">
+						<div class="div-1">
+							<div class="div-2">
+								<label for="input1">
+									Nombre científico
+								</label>
+								<input id="input1" type="text" name="input1" required />
+							</div>
+
+							<div class="div-2">
+								<label for="input2">
+									Nombre común
+								</label>
+								<input id="input2" type="text" name="input2" placeholder="" />
+							</div>
+
+							<div class="div-2">
+								<label for="input3">
+									Hábito
+								</label>
+								<select id="input3" name="input3"> 
+									<option selected> - </option>
+									<option>Arboles</option>
+									<option>Arbustos</option>
+									<option>Cactus</option>
+									<option>Hierbas</option>
+									<option>Hepaticas</option>
+									<option>Musgos</option>
+									<option>Anthocerotes</option>
+									<option>Trepadoras</option>
+									<option>Epífitas</option>
+									<option>Líquenes</option>
+									<option>Helechos</option>
+								</select>
+							</div>
+
+							<div class="div-2">
+								<label for="input4">
+									Origen fitogeográfico
+								</label>
+								<select id="input4" name="input4">
+									<option selected> - </option>
+									<option>Nativo</option>
+									<option>Introducido</option>
+									<option>Endémico</option>
+									<option>Cosmopolito</option>
+								</select>
+							</div>
+
+							<div class="div-2">
+								<label for="input5">
+									Distribución geográfica
+								</label>
+								<select id="input5" name="input5">
+										<option selected> - </option>
+										<option>Chile</option>
+										<option>Global</option>
+								</select> 
+							</div>
+
+							<div class="div-2">
+								<label for="input6">
+									Estado de conservación
+								</label>
+								<select id="input6" name="input6">
+										<option selected> - </option>
+										<option>Extinta</option>
+										<option>En peligro</option>
+										<option>Vulnerable</option>
+										<option>Fuera de peligro</option>
+										<option>IC (¿Extinta?)</option>
+										<option>IC (¿En peligro?)</option>
+										<option>IC (¿Vulnerable?)</option>
+										<option>IC (¿Fuera de peligro?)</option>
+										<option>No evaluada</option>
+								</select>
+							</div>
+
+							<div class="div-2">
+								<label for="input13">
+									Formaciones Vegetales
+								</label>
+								<select id="input13" name="input13">
+										<option selected> - </option>
+										<option>Desierto Absoluto</option>
+										<option>Matorral desértico</option>
+										<option>Matorral bajo desértico</option>
+										<option>Matorral espinoso</option>
+										<option>Bosque espinoso</option>
+										<option>Matorral esclerófilo</option>
+										<option>Bosque esclerófilo</option>
+										<option>Bosque caducifolio</option>
+										<option>Matorral caducifolio</option>
+										<option>Bosque laurifolio</option>
+										<option>Bosque resinoso de coníferas</option>
+										<option>Bosque siempreverde</option>
+										<option>Matorral siempreverde</option>
+										<option>Turbera</option>
+										<option>Matorral bajo de altitud</option>
+										<option>Herbazal de altitud</option>
+										<option>Estepa y pastizales</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="div-1">
+							<div class="div-2">
+								<label for="input7">
+									Hábitat
+								</label>
+								<input id="input7" type="text" name="input7" />
+							</div>
+
+							<div class="div-2">
+								<label for="input8-1">
+									Intervalo de altitud
+								</label>
+								<span>
+									desde
+								</span>
+								<input id="input8-1" class="input-altitud" type="number" name="input8-1" />
+								<span>
+									hasta
+								</span>
+								<input class="input-altitud" type="number" name="input8-2" />
+							</div>
+
+							<div class="div-2">
+								<label for="input9">
+									Ambiente
+								</label>
+								<select id="input9" name="input9">
+										<option selected> - </option>
+										<option>Cordillera de la Costa</option>
+										<option>Cordillera de los Andes</option>
+										<option>Desierto</option>
+										<option>Interior</option>
+										<option>Litoral</option>
+										<option>Turbera</option>
+										<option>Valle Central</option>
+								</select>
+							</div>
+
+							<div class="div-2">
+								<label for="input10">
+									Regiones vegetales
+								</label>
+								<select id="input10" name="input10">
+										<option selected> - </option>
+										<option>Bosque Andino Patagónico</option>
+										<option>Bosque Caducifolio</option>
+										<option>Bosque Laurifolio</option>
+										<option>Bosque Siempreverde y Turberas</option>
+										<option>Desierto</option>
+										<option>Estepa Alto-andina</option>
+										<option>Estepa Patagónica</option>
+										<option>Matorral y Bosque Esclerófilo</option>
+								</select>
+							</div>						
+
+							<div class="div-2">
+								<label for="input11">
+									Sexo especie
+								</label>
+								<select id="input11" name="input11">
+										<option selected> - </option>
+										<option>Monoico</option>
+										<option>Dioico</option>
+										<option>Hermafrodita</option>
+								</select>
+							</div>
+
+							<div class="div-3">
+								<label for="input12">
+									Epoca de floración
+								</label>
+								<textarea id="input12" name="input12"></textarea>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
 		</section>
 	</body>
 </html>
