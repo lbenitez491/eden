@@ -6,9 +6,102 @@ body{
 	font-weight: 400;
 }
 
+/* Botón de aprobación */ 
+.boton-true{
+	background-color: #f1693d;
+	color: #fff;
+	font-size: 0.9em;
+	font-weight: 400;
+	border: none;
+	width: 425px;
+	height: 32px;
+	border-radius: 3px;
+}
+
 /* D */
 #div-4{
 	display: none;
+}
+
+#div-5{
+	display: none;
+}
+
+/* F */
+/* Input */
+#form-especie input{
+	width: 415px;
+	height: 32px;
+	padding: 0 0 0 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #fdfdfd;
+	font-size: 0.9em;
+}
+
+/* Input */
+#form-especie select{
+	width: 425px;
+	height: 32px;
+	font-size: 0.9em;
+}
+
+/* Input */
+#form-especie textarea{
+	width: 415px;
+	height: 90px;
+	padding: 0 0 0 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #fdfdfd;
+	font-size: 0.9em;
+}
+
+/* Input altitud */
+#form-especie .input-altitud{
+	width: 120px;
+	display: inline;
+}
+
+/* Grupo izquierda de inputs */
+#form-especie .div-1:nth-child(odd){
+	display: inline-block;
+	width: 430px;
+	vertical-align: top;
+	margin: 0 10px 0 5px;
+}
+
+/* Grupo derecha de inputs */
+#form-especie .div-1{
+	display: inline-block;
+	width: 430px;
+	vertical-align: top;
+}
+
+/* Div que contiene un input */
+#form-especie .div-2{
+	min-height: 70px;
+	vertical-align: top;
+	width: 430px;
+}
+
+/* Div que contiene un textarea */
+#form-especie .div-3{
+	min-height: 140px;
+	vertical-align: top;
+	width: 430px;
+	margin: 0 5px 0 5px;
+}
+
+#form-especie .div-boton{
+	width: 100%;
+	text-align: right;
+	border-top: 1px solid #eee;
+	padding: 10px 0 0 0;
+}
+
+#form-especie .div-boton button{
+	margin: 0 10px 0 0;
 }
 
 /* H */
@@ -52,7 +145,7 @@ body{
 /* L */
 label{
 	display: block;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	font-weight: 600;
 	color: #606060;
 	margin-bottom: 4px;
@@ -78,23 +171,22 @@ label{
 }
 
 #nav-1 ul .li-select{
-	border-right: 5px solid orange;
+	border-right: 5px solid #f1693d;
 	padding: 10px 5px 10px 0;
-	color: #909090;
 }
 
 #nav-1 ul li .a-select{
-	color: #303030;
+	color: #202020;
 }
 
 #nav-1 ul li a{
 	text-decoration: none;
 	font-weight: 700;
-	color: #909090;
+	color: #BDBDBD;
 }
 
 #nav-1 ul li a:hover{
-	color: #303030;
+	color: #808080;
 }
 
 /* S */
@@ -106,8 +198,10 @@ label{
 
 #section-1 #div-1{
 	width: 115px;
+	padding: 0 0px 0 0;
 	display: inline-block;
 	vertical-align: top;
+	text-align: right;
 }
 
 #section-1 #div-2{
@@ -116,74 +210,6 @@ label{
 	vertical-align: top;
 }
 
-/* Input */
-#section-1 form input{
-	width: 425px;
-	height: 32px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background-color: #fdfdfd;
-}
-
-/* Input */
-#section-1 form select{
-	width: 425px;
-	height: 32px;
-}
-
-/* Input */
-#section-1 form textarea{
-	width: 425px;
-	height: 90px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background-color: #fdfdfd;
-}
-
-/* Input altitud */
-#section-1 form .input-altitud{
-	width: 120px;
-	display: inline;
-}
-
-/* Grupo izquierda de inputs */
-#section-1 form .div-1:nth-child(odd){
-	display: inline-block;
-	width: 430px;
-	vertical-align: top;
-	margin: 0 10px 0 5px;
-}
-
-/* Grupo derecha de inputs */
-#section-1 form .div-1{
-	display: inline-block;
-	width: 430px;
-	vertical-align: top;
-}
-
-/* Div que contiene un input */
-#section-1 form .div-2{
-	min-height: 70px;
-	vertical-align: top;
-	width: 430px;
-}
-
-/* Div que contiene un textarea */
-#section-1 form .div-3{
-	min-height: 140px;
-	vertical-align: top;
-	width: 430px;
-	margin: 0 5px 0 5px;
-}
-
-/* Botón de aprobación */ 
-#section-1 form .boton-true{
-	background-color: #f1693d;
-	color: #fff;
-	font-size: 1em;
-	font-weight: 400;
-	border: none;
-}
 
 span{
 	font-size: 0.8em;
