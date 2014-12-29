@@ -50,7 +50,7 @@ $( "#input4" ).click(function(event) {
   	};
 });
 
-$( "#boton-true-taxonomia" ).click(function(event) {
+/*$( "#boton-true-taxonomia" ).click(function(event) {
   event.preventDefault();
   $( "#nav-1 ul li" ).attr("class","");
   $( "#li-2" ).attr("class","li-select");
@@ -79,6 +79,34 @@ $( "#boton-true-descripcion" ).click(function(event) {
 $( "#boton-true-distribucion" ).click(function(event) {
   event.preventDefault();
  
+});*/
+
+
+
+$( "#boton-true-taxonomia" ).click(function(event) {
+  event.preventDefault();
+  clase = $("#input15").val();
+  var parametros = {
+    "clase" : clase
+  };
+  $.ajax({
+          data:  parametros,
+          url:   'guarda_especie_plantae.php',
+          type:  'post',
+          beforeSend: function () {
+                  $("#resultado").html("Procesando, espere por favor...");
+          },
+          success:  function (response) {
+                  if(response == "1"){
+                    $("#boton-true-taxonomia").html("Guardado. Ahora ir a descripción");
+                    $("#boton-true-taxonomia").attr("class","boton-verde-continuar");
+                  } else {
+                    alert("Ha ocurrido un error.");
+                  };
+          }
+  });
 });
+
+
 
 

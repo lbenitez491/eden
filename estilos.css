@@ -6,9 +6,31 @@ body{
 	font-weight: 400;
 }
 
-/* Botón de aprobación */ 
-.boton-true{
+/* Botón naranja */ 
+.boton-naranja-guardar{
 	background-color: #f1693d;
+	color: #fff;
+	font-size: 0.9em;
+	font-weight: 400;
+	border: none;
+	width: 425px;
+	height: 32px;
+	border-radius: 3px;
+}
+
+.boton-naranja-guardar::after{
+	display: inline-block;
+    width: 20px;
+    height: 17px;
+    margin: 0 0 0 5px;
+    content: "";
+    background: url("imagenes/guardar.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+/* Botón verde */
+.boton-verde-continuar{
+	background-color: #5ba600;
 	color: #fff;
 	font-size: 0.9em;
 	font-weight: 400;
@@ -36,14 +58,16 @@ body{
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	background-color: #fdfdfd;
-	font-size: 0.9em;
+	font-size: 1em;
+	font-weight: 400;
 }
 
 /* Input */
 #form-especie select{
 	width: 425px;
 	height: 32px;
-	font-size: 0.9em;
+	font-size: 1em;
+	font-weight: 400;
 }
 
 /* Input */
@@ -106,40 +130,80 @@ body{
 
 /* H */
 #header-1{
-	height: 70px;
+	height: 50px;
 	background-color: #f5f5f5;
+	overflow: hidden;
 	border-bottom: 1px solid #eee;
 }
 
 /* Ancho de la cabecera */
-#header-1 div{
+#header-1 #div-header{
 	max-width: 1000px;
 	margin: auto;
 }
 
-
-#header-1 div h1{
+#header-1 #div-header h1{
 	color: #101010;
-	font-size: 3em;
-	display: inline;
+	font-size: 2.5em;
 	font-weight: 600;
-	line-height: 70px;
+	display: inline;
+	float: left;
+	line-height: 50px;
 }
 
-#header-1 div h2{
+#header-1 #div-header h2{
 	color: #828282;
-	font-size: 1em;
-	display: inline;
+	font-size: 0.9em;
 	font-weight: 400;
-	margin: 0 0 0 20px;
-}
-
-#header-1 div figure img{
-	height: 40px;
-}
-
-#header-1 div figure{
+	margin: 0 0 0 10px;
 	display: inline;
+}
+
+#header-1 #div-header figure{
+	display: inline;
+	position: relative;
+	top: 9px;
+	margin: 0 0 0 2px;
+}
+
+#header-1 #div-header figure img{
+	height: 32px;
+}
+
+/* Perfil */
+#header-1 #div-perfil{
+	display: inline;
+	float: right;
+	height: 50px;
+	padding: 0 5px 0 5px;
+}
+
+#header-1 #div-perfil:hover{
+	background-color: #d4d4d4;
+	cursor: pointer;
+	
+}
+
+#header-1 #div-perfil span{
+	font-size: 0.9em;
+	font-weight: 600;
+	color: #828282;
+
+}
+
+#header-1 #div-perfil #figure-perfil{
+	position: relative;
+	top: 9px;
+}
+
+#header-1 #div-perfil #figure-perfil img{
+	width: 32px; 
+	border-radius: 32px;
+}
+
+#header-1 #div-perfil #figure-menu img{
+	height: 20px;
+	background-color: red;
 }
 
 /* L */
@@ -166,7 +230,7 @@ label{
 }
 
 #nav-1 ul li:hover{
-	border-right: 5px solid orange;
+	border-right: 5px solid #f1693d;
 	padding: 10px 5px 10px 0;
 }
 
@@ -180,6 +244,7 @@ label{
 }
 
 #nav-1 ul li a{
+	font-size: 1em;
 	text-decoration: none;
 	font-weight: 700;
 	color: #BDBDBD;
